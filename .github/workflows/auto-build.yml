@@ -1,4 +1,4 @@
-name: auto-build-neuro
+name: auto-build
 
 on:
   push:
