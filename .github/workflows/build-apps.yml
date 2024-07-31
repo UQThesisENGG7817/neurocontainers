@@ -68,12 +68,12 @@ jobs:
 
              echo "Available storage:"
              sudo df -h
-      - name: Move docker installation (optional)
-        if: env.FREEUPSPACE == 'true'
-        run: |
-          sudo mv /var/lib/docker /home/runner/work/docker
-          sudo ln -s /home/runner/work/docker /var/lib/docker
-          sudo systemctl restart docker
+      # - name: Move docker installation (optional)
+      #   if: env.FREEUPSPACE == 'true'
+      #   run: |
+      #     sudo mv /var/lib/docker /home/runner/work/docker
+      #     sudo ln -s /home/runner/work/docker /var/lib/docker
+      #     sudo systemctl restart docker
       - name : Build recipes
         run: |
           echo "APPLICATION: $APPLICATION"
