@@ -1,10 +1,10 @@
 {
     "default": {
         "autoBuild": true,
-        "freeUpSpace": false
+        "freeUpSpace": true
     },
     "template": {
         "autoBuild": true,
-        "freeUpSpace": false
+        "freeUpSpace": true
     }
 }
