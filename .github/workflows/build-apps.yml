@@ -54,7 +54,7 @@ jobs:
         if: env.FREEUPSPACE == 'true'
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 40000
+          root-reserve-mb: 30000
           swap-size-mb: 1024
           remove-dotnet: 'true'
           remove-android: 'true'
