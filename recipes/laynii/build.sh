@@ -31,7 +31,8 @@ neurodocker generate ${neurodocker_buildMode} \
    --run="mkdir -p ${mountPointList}"                      `# create folders for singularity bind points` \
    --install wget ca-certificates openssl unzip \
    --workdir /opt/${toolName}-${toolVersion}/ \
-   --run="wget --secure-protocol=TLSv1_3 https://github.com/layerfMRI/LAYNII/releases/download/v2.2.1/LayNii_v${toolVersion}_Linux64.zip \
+   --run="openssl s_client -connect -debug -showcerts github.com:443" \
+   --run="wget --secure-protocol=TLSv1_2 https://github.com/layerfMRI/LAYNII/releases/download/v2.2.1/LayNii_v${toolVersion}_Linux64.zip \
             && unzip LayNii_v${toolVersion}_Linux64.zip \
             && rm LayNii_v${toolVersion}_Linux64.zip" \
    --env DEPLOY_PATH=/opt/${toolName}-${toolVersion}/ \
