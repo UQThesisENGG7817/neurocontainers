@@ -99,7 +99,9 @@ echo "[DEBUG] Attempting upload to AWS Object Storage ... SKIP Temporarily"
 #     exit 2
 # fi
 
-
+# export DOCKER_HOST="unix:///run/docker/docker.sock"
+# export DOCKER_HOST="/var/run/docker.sock"
+ln -s -f /run/docker/docker.sock /var/run/docker.sock
 if [ "$GITHUB_REF" == "refs/heads/master" ]; then
     if [ -n "$GH_REGISTRY" ]; then
       echo "[DEBUG] Pushing to GitHub Registry $GH_REGISTRY"
@@ -124,4 +126,3 @@ if [ "$GITHUB_REF" == "refs/heads/master" ]; then
 else
     echo "[DEBUG] Skipping push to registry. Not on master branch"
 fi
-
