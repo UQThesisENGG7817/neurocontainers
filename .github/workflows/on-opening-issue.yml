@@ -9,3 +9,7 @@ jobs:
     # uses: NeuroDesk/neurodesk.github.io/.github/workflows/add-issue-to-project.yml@main
     # secrets:
     #   PAT: ${{ secrets.NEURODESK_GITHUB_TOKEN_ISSUE_AUTOMATION }}
+    steps:
+      - name: bypasssing
+        run: |
+          echo "Bypassing Github issues project of neurodesk"
