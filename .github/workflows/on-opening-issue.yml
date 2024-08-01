@@ -9,6 +9,7 @@ jobs:
     # uses: NeuroDesk/neurodesk.github.io/.github/workflows/add-issue-to-project.yml@main
     # secrets:
     #   PAT: ${{ secrets.NEURODESK_GITHUB_TOKEN_ISSUE_AUTOMATION }}
+    runs-on: ubuntu-latest
     steps:
       - name: bypasssing
         run: |
