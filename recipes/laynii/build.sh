@@ -29,7 +29,7 @@ neurodocker generate ${neurodocker_buildMode} \
    --run="printf '#!/bin/bash\nls -la' > /usr/bin/ll"   `# define the ll command to show detailed list including hidden files`  \
    --run="chmod +x /usr/bin/ll"                         `# make ll command executable`  \
    --run="mkdir -p ${mountPointList}"                      `# create folders for singularity bind points` \
-   --install wget ca-certificates unzip \
+   --install wget ca-certificates openssl unzip \
    --workdir /opt/${toolName}-${toolVersion}/ \
    --run="wget --secure-protocol=TLSv1 https://github.com/layerfMRI/LAYNII/releases/download/v2.2.1/LayNii_v${toolVersion}_Linux64.zip \
             && unzip LayNii_v${toolVersion}_Linux64.zip \
