@@ -76,7 +76,7 @@ if [ -f "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" ]; then
   rm -rf $IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg
 fi
 echo "[DEBUG] Singularity build"
-singularity build "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" docker-archive://${$IMAGE_HOME}/${IMAGENAME}_${BUILDDATE}.tar
+singularity build "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" docker-archive://${IMAGE_HOME}/${IMAGENAME}_${BUILDDATE}.tar
 
 # cleanup
 if [ -f "${IMAGENAME}_${BUILDDATE}.tar" ]; then
