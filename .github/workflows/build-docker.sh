@@ -55,7 +55,7 @@ then
 fi
 
 
-export IMAGE_HOME="/storage/tmp"
+export IMAGE_HOME="/home/runner/_worker"
 
 if [ -d "$IMAGE_HOME" ]; then
   echo "[DEBUG] $IMAGE_HOME exists"
