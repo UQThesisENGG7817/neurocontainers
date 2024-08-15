@@ -70,7 +70,7 @@ echo "saving docker image locally for singularity to convert:"
 if [ -f "${IMAGENAME}_${BUILDDATE}.tar" ]; then
   rm -rf ${IMAGENAME}_${BUILDDATE}.tar
 fi
-docker save $IMAGEID:$SHORT_SHA -o ${IMAGENAME}_${BUILDDATE}.tar
+docker save $IMAGEID:$SHORT_SHA -o $IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.tar
 
 if [ -f "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" ]; then
   rm -rf $IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg
