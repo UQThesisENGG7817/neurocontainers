@@ -75,6 +75,8 @@ docker save $IMAGEID:$SHORT_SHA -o $IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.tar
 if [ -f "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" ]; then
   rm -rf $IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg
 fi
+
+export SINGULARITY_TMPDIR=$IMAGE_HOME
 echo "[DEBUG] Singularity build"
 singularity build "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" docker-archive://${IMAGE_HOME}/${IMAGENAME}_${BUILDDATE}.tar
 
