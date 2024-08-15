@@ -55,7 +55,7 @@ then
 fi
 
 
-export IMAGE_HOME="/home/runner/_worker"
+export IMAGE_HOME="/home/runner/_work"
 
 if [ -d "$IMAGE_HOME" ]; then
   echo "[DEBUG] $IMAGE_HOME exists"
@@ -75,6 +75,7 @@ docker save $IMAGEID:$SHORT_SHA -o ${IMAGENAME}_${BUILDDATE}.tar
 if [ -f "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" ]; then
   rm -rf $IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg
 fi
+echo "[DEBUG] Singularity build"
 singularity build "$IMAGE_HOME/${IMAGENAME}_${BUILDDATE}.simg" docker-archive://${IMAGENAME}_${BUILDDATE}.tar
 
 # cleanup
