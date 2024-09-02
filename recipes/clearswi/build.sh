@@ -50,3 +50,4 @@ fi
    # --run="unzip /neurodesktop-storage/swi-demo/01_bids.zip -d /neurodesktop-storage/swi-demo/" \
    # --copy test.jl /neurodesktop-storage \
    # --run="julia test.jl" \
+   
