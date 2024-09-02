@@ -39,7 +39,7 @@ function build {
   echo -en "## $container_name/$container_version ##\n ---- \n\n Description:\n $software_description \n\n Example: \n $example \n\n $link" > ./README.md
   read -p 'Test command of tool: ' test && echo $test > ./test.sh
   
-  python3 extract.py
+  python extract.py
   echo "cleaning up ..."
 
   rm bash_history
