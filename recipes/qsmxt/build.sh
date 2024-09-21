@@ -107,3 +107,4 @@ fi
    # behaviour: julia writes precompiled stuff to ~/.julia and searches for packages in both, but can't find them in ~/.julia and then searches in /opt/
    # if anyone has a better way of doing this, please let me know: @sbollmann_MRI (Twitter)
 
+
